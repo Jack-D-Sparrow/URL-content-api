@@ -2,3 +2,4 @@ Flask
 readability-lxml
 requests
 gunicorn
+beautifulsoup4

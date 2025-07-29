@@ -17,7 +17,7 @@ def extract_content():
         doc = Document(response.text)
         return jsonify({
             'title': doc.short_title(),
-            'content': doc.summary()
+            'content': Document(response.text).summary(html_partial=False)
         })
     except Exception as e:
         return jsonify({'error': str(e)}), 500
